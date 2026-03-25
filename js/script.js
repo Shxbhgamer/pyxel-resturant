@@ -171,3 +171,19 @@ upiBox.style.display = "block";
 upiBox.style.display = "none";
 }
 }
+
+function toggleMenu(){
+let nav = document.querySelector(".nav-links");
+let burger = document.querySelector(".hamburger");
+
+nav.classList.toggle("active");
+burger.classList.toggle("open");
+}
+
+/* AUTO CLOSE */
+document.querySelectorAll(".nav-links a").forEach(link=>{
+link.addEventListener("click",()=>{
+document.querySelector(".nav-links").classList.remove("active");
+document.querySelector(".hamburger").classList.remove("open");
+});
+});
