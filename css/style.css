@@ -916,3 +916,46 @@ right:0;
 }
 
 }
+/* ===== FINAL HAMBURGER FIX ===== */
+@media (max-width:768px){
+
+.hamburger{
+display:flex !important;
+position:absolute;
+right:20px;
+top:22px;
+flex-direction:column;
+gap:6px;
+z-index:9999;
+}
+
+.hamburger span{
+width:30px;
+height:3px;
+background:linear-gradient(90deg,orange,red);
+box-shadow:0 0 10px orange;
+border-radius:5px;
+}
+
+/* hide desktop nav */
+.nav-links{
+position:fixed;
+top:0;
+right:-100%;
+width:75%;
+height:100vh;
+background:rgba(0,0,0,0.95);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:30px;
+transition:0.4s;
+z-index:9998;
+}
+
+.nav-links.active{
+right:0;
+}
+
+}
